@@ -1,2 +1,0 @@
-# lightbox
-Simple Lightbox Modal
