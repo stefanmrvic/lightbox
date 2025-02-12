@@ -10,11 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
         element.addEventListener('click', showLightbox);
     });
 
-    let currentImage;
-
     function showLightbox(e) {
-        currentImage = document.querySelector("img[src= e.target.src]");
-        alert(currentImage);
 
         lightbox.style.display = 'block';
         // Added setTimeout because animations bugs out if there is no slight delay after display has been changed 
@@ -37,21 +33,22 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 400)
     })
 
-    const leftArrow = document.querySelector('.lightbox__previous-arrow');
-    const rightArrow = document.querySelector('.lightbox__next-arrow');
-    let numOfImages = grid.childElementCount;
+    // TO DO
+    // const leftArrow = document.querySelector('.lightbox__previous-arrow');
+    // const rightArrow = document.querySelector('.lightbox__next-arrow');
+    // let numOfImages = grid.childElementCount;
 
-    leftArrow.addEventListener('click', showPreviousImage);
-    rightArrow.addEventListener('click', showNextImage);
+    // leftArrow.addEventListener('click', showPreviousImage);
+    // rightArrow.addEventListener('click', showNextImage);
 
-    const firstImage = grid.firstChild;
-    const lastImage = grid.lastChild;
+    // const firstImage = grid.firstChild;
+    // const lastImage = grid.lastChild;
 
-    function showPreviousImage() {
-        lightboxImage.src = currentImage.previousSibling.src;
-    }
+    // function showPreviousImage() {
+    //     lightboxImage.src = currentImage.previousSibling.src;
+    // }
 
-    function showNextImage() {
-        lightboxImage.src = currentImage.nextSibling.src;
-    }
+    // function showNextImage() {
+    //     lightboxImage.src = currentImage.nextSibling.src;
+    // }
 })    
