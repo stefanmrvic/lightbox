@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightbox</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="css/fontawesome/css/solid.css">
-</head>
-<body>
-    <main>
-        <div class="container">
-            <div class="grid">
-                <img class="grid-items" src="imgs/dog_1.jpeg" alt="">
-                <img class="grid-items" src="imgs/dog_2.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_3.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_4.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_5.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_6.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_7.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_8.jpg" alt="">
-                <img class="grid-items" src="imgs/dog_9.jpg" alt="">
-            </div>
-
-            <div class="lightbox">
-                <div class="lightbox__container">
-                    <div class="lightbox__previous-arrow">
-                        <i class="fa-solid fa-arrow-left"></i>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lightbox</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fontawesome/css/fontawesome.css" />
+        <link rel="stylesheet" href="css/fontawesome/css/solid.css" />
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="grid">
+                    <!-- 
+                  We will allow developers to simply add `data-lightbox` to any img they want to enable the lightbox
+                  functionality on.
+                      -->
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_1.jpeg" alt="" />
                     </div>
-                    <div class="lightbox__image">
-                        <img src="imgs/dog_7.jpg" alt="">
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_2.jpg" alt="" />
                     </div>
-                    <div class="lightbox__next-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_3.jpg" alt="" />
                     </div>
-                    <div class="lightbox__close">
-                        <i class="fa-solid fa-x"></i>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_4.jpg" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_5.jpg" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_6.jpg" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_7.jpg" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_8.jpg" alt="" />
+                    </div>
+                    <div class="grid-item">
+                        <img data-lightbox src="imgs/dog_9.jpg" alt="" />
                     </div>
                 </div>
+
+                <!-- 
+                While inserting the lightbox like this is certainly something you can do, if you're making a re-usable
+                package for other people to use, this wouldn't be very developer-friendly. Instead, we can use JavaScript
+                to dynamically inject the lightbox into the DOM whenever we need it.
+                  -->
+                <!-- <div class="lightbox">
+                    <div class="lightbox__container">
+                        <div class="lightbox__previous-arrow">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div class="lightbox__image">
+                            <img src="imgs/dog_7.jpg" alt="" />
+                        </div>
+                        <div class="lightbox__next-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="lightbox__close">
+                            <i class="fa-solid fa-x"></i>
+                        </div>
+                    </div>
+                </div> -->
             </div>
-        </div>
-    </main>
-    <script src="js/main.js"></script>
-</body>
+        </main>
+        <script src="js/main.js"></script>
+    </body>
 </html>
